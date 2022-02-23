@@ -28,7 +28,7 @@ object Action {
         val end = primaryCaret.selectionEnd
         val selection = document.getText(TextRange(start, end))
         if(selection.trim().isEmpty()){
-            project.showNtf("info".l, "existing_string".l)
+            project.showNtf("info".l, "empty_string".l)
             return
         }
         val key = selection.key
