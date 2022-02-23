@@ -1,5 +1,5 @@
 // Copyright 2022 MrDev
-package com.mrdev.multilanguages.action
+package com.mrdev.plugin.localization.action
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent

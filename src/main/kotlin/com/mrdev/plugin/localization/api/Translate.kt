@@ -1,8 +1,8 @@
-package com.mrdev.multilanguages.api
+package com.mrdev.plugin.localization.api
 
 import com.google.gson.Gson
-import com.mrdev.multilanguages.config.C
-import com.mrdev.multilanguages.model.Translation
+import com.mrdev.plugin.localization.config.C
+import com.mrdev.plugin.localization.model.Translation
 import okhttp3.FormBody
 import okhttp3.OkHttpClient
 import okhttp3.Request

@@ -1,4 +1,6 @@
-package com.mrdev.multilanguages.extension
+package com.mrdev.plugin.localization.extension
+
+import com.mrdev.plugin.localization.helper.Loc
 
 val String.key: String
     get() {
@@ -11,3 +13,8 @@ val String.key: String
         t = t.replace(" ", "_")
         return regex.replace(t, "")
     }
+
+val String.l: String
+get(){
+    return Loc.textOf(this)
+}

@@ -1,5 +1,5 @@
 // Copyright 2022 MrDev
-package com.mrdev.multilanguages.action
+package com.mrdev.plugin.localization.action
 
 import com.intellij.notification.NotificationType
 import com.intellij.openapi.actionSystem.AnActionEvent
@@ -10,10 +10,11 @@ import com.intellij.psi.search.FilenameIndex
 import com.intellij.psi.search.GlobalSearchScope
 import com.intellij.psi.xml.XmlFile
 import com.intellij.psi.xml.XmlTag
-import com.mrdev.multilanguages.api.Translate
-import com.mrdev.multilanguages.extension.key
-import com.mrdev.multilanguages.extension.showNtf
-import com.mrdev.multilanguages.helper.Loc
+import com.mrdev.plugin.localization.api.Translate
+import com.mrdev.plugin.localization.extension.key
+import com.mrdev.plugin.localization.extension.l
+import com.mrdev.plugin.localization.extension.showNtf
+import com.mrdev.plugin.localization.helper.Loc
 import java.util.*
 import java.io.*
 
@@ -27,7 +28,7 @@ object Action {
         val end = primaryCaret.selectionEnd
         val selection = document.getText(TextRange(start, end))
         if(selection.trim().isEmpty()){
-            project.showNtf("Info", Loc.textOf("existing_string"))
+            project.showNtf("info".l, "existing_string".l)
             return
         }
         val key = selection.key
@@ -62,12 +63,12 @@ object Action {
                 }
 
                 if(file.textLength < 13){
-                    project.showNtf(Loc.textOf("info"), Loc.textOf("invalid_strings"), NotificationType.ERROR)
+                    project.showNtf("info".l, "invalid_strings".l, NotificationType.ERROR)
                     continue
                 }
                 val xmlFile = file as XmlFile
                 if(xmlFile.document == null){
-                    project.showNtf(Loc.textOf("info"), Loc.textOf("invalid_strings"), NotificationType.ERROR)
+                    project.showNtf("info".l, "invalid_strings".l, NotificationType.ERROR)
                     continue
                 }
                 val tags = xmlFile.document!!.rootTag!!.subTags
@@ -89,7 +90,7 @@ object Action {
                         out.write(text)
                     }
                 } else {
-                    project.showNtf(Loc.textOf("info"), Loc.textOf("existing_string"))
+                    project.showNtf("info".l, "existing_string".l)
                 }
             }
         }

@@ -1,12 +1,12 @@
 // Copyright 2022 MrDev
-package com.mrdev.multilanguages.handler
+package com.mrdev.plugin.localization.handler
 
 import com.intellij.codeInsight.editorActions.TypedHandlerDelegate
 import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiFile
-import com.mrdev.multilanguages.helper.Loc
+import com.mrdev.plugin.localization.helper.Loc
 
 /**
  * This is a custom [TypedHandlerDelegate] that handles actions activated keystrokes in the editor.

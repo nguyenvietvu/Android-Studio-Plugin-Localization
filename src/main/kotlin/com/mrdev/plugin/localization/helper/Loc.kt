@@ -1,4 +1,4 @@
-package com.mrdev.multilanguages.helper
+package com.mrdev.plugin.localization.helper
 
 import java.util.*
 
