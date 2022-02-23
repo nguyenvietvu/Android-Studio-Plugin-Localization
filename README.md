@@ -1,5 +1,8 @@
 # Android-Studio-Plugin-Localization
 Android Studio Plugin Localization.
+
+Marketplace: https://plugins.jetbrains.com/plugin/18675-localization
+
 Generate (key,value) form text and insert into strings.xml.
 
 Translate text into multiple languages that project supported
