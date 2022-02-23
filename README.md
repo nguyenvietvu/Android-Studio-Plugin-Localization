@@ -1,6 +1,8 @@
 # Android-Studio-Plugin-Multi-Languages
 Android Studio Plugin Multi-Languages
 
+demo: https://youtu.be/qWnkZrnag_c
+
 #Config
 1. Translate api:
    
