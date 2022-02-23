@@ -1,5 +1,5 @@
-# Android-Studio-Plugin-Multi-Languages
-Android Studio Plugin Multi-Languages
+# Android-Studio-Plugin-Localization
+Android Studio Plugin Localization
 
 demo: https://youtu.be/qWnkZrnag_c
 
