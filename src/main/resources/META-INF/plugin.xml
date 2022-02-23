@@ -1,0 +1,49 @@
+<idea-plugin url="https://github.com/nguyenvietvu">
+    <id>com.mrdev.multilanguages</id>
+    <name>Multilanguages</name>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+
+    <!-- Text to display as description on Preferences/Settings | Plugin page -->
+    <description>
+        <![CDATA[
+            This plugin generate multi-languages (key, string).<br>
+            1. Select string in the source code<br>
+            2. Right-click or <b>(Cmd + Opt + F)</b><br>
+            3. Select <b>Generate</b> at the top menu<br>
+        ]]>
+    </description>
+    <change-notes>
+        <![CDATA[
+            <b>1.0.0</b> Release on 2022.02.22<br>
+        ]]>
+    </change-notes>
+
+    <!-- Text to display as company information on Preferences/Settings | Plugin page -->
+    <vendor url="https://github.com/nguyenvietvu">MrDev</vendor>
+
+    <actions>
+        <action id="EditorBasics.EditorIllustrationActionGet"
+                class="com.mrdev.multilanguages.action.GenActionGet"
+                text="Generate multi-language with getString"
+                description="Generate multi-language"
+                icon="PluginIcons.icon">
+            <keyboard-shortcut keymap="$default" first-keystroke="control alt G"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+        <action id="EditorBasics.EditorIllustrationAction"
+                class="com.mrdev.multilanguages.action.GenAction"
+                text="Generate multi-language"
+                description="Generate multi-language"
+                icon="PluginIcons.icon">
+            <keyboard-shortcut keymap="$default" first-keystroke="control alt F"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <typedHandler implementation="com.mrdev.multilanguages.handler.TypedHandler"/>
+    </extensions>
+</idea-plugin>
+

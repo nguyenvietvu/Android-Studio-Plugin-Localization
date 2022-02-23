@@ -1,0 +1,35 @@
+plugins {
+    id 'org.jetbrains.intellij' version '1.4.0'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.32'
+}
+
+group 'org.mrdev'
+version '1.0.0-alpha'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "com.squareup.okhttp3:okhttp:4.9.3"
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+//    version = '2021.1.3'
+  plugins = ['Kotlin', 'android']
+  localPath = '/Applications/Android Studio.app/Contents'
+
+}
+
+//patchPluginXml {
+//    changeNotes = """
+//      First Release.<br>
+//      <a href='https://github.com/nguyenvietvu'>MrDev here</a>"""
+//}
+
+publishPlugin {
+    channels = ['your channel']
+    token = 'your token'
+}
