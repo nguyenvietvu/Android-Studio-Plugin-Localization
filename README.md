@@ -1,7 +1,11 @@
 # Android-Studio-Plugin-Localization
-Android Studio Plugin Localization
+Android Studio Plugin Localization.
+Generate (key,value) form text and insert into strings.xml.
 
-demo: https://youtu.be/qWnkZrnag_c
+Translate text into multiple languages that project supported
+
+video demo: 
+[![Watch the video](https://img.youtube.com/vi/qWnkZrnag_c/maxresdefault.jpg)](https://youtu.be/qWnkZrnag_c)
 
 #Config
 1. Translate api:
